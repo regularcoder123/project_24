@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+    <form name="my_form" onsubmit="checkForm()">
+        <label>Name:</label>
+        <input type="text" name="gname"><br>
+        <label>Age:</label>
+        <input type="number" name="gage"><br><br>
+        <input type="submit" value="submit"><br>
+
+
+
+
+    </form>
+    <p>
+        You must be at least 18 years old to pass and have a name
+    </p>
+    <script>
+        function checkForm(){
+            var six = document.forms['my_form']['gname'].value
+            var seven = document.forms['my_form']['gage'].value
+            if (six=='' && seven == ''){
+                alert('ERRROR: PLEASE FILL IN NAME AND AGE')
+                
+            }
+            else if (seven < 18){
+                alert('ERRROR: YOU MUST BE AT LEAST 18')
+                
+            }
+            else if (seven = ''){
+                alert('ERRROR: YOU MUST FILL IN YOUR AGE')
+            }
+            else if (six = ''){
+                alert('ERRROR: YOU MUST FILL IN YOUR NAME')
+            }
+            else{
+                alert('SUBMITTED SUCCESSFULLY')
+            }
+        }
+    </script>
+    
+</body>
+</html>
